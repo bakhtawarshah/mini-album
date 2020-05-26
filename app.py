@@ -1,7 +1,12 @@
 from tkinter import *
+from PIL import ImageTk,Image
+
 root = Tk()
-welcomeText = Label(root, text="Hi")
-welcomeText.grid(row=0, column=0)
-saveButton = Button(root, text="Save")
-saveButton.grid(row=1, column=0)
+root.geometry('400x200')
+root.title('Mini Album')
+
+img1 = ImageTk.PhotoImage(Image.open("images/1.png"))
+showImg = Label(image=img1)
+showImg.grid(row=0, column=0)
+
 root.mainloop()
